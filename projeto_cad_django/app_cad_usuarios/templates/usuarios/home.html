@@ -1,0 +1,17 @@
+{% extends 'usuarios/base.html'%}
+{% block conteudo%}
+<link rel="stylesheet" href="style.css">
+
+<form style="padding: 7%;" action="{%url 'listagem_de_usuarios' %}" method="post">
+  {% csrf_token %}
+  <div style="text-align: center; background-color: rgb(134, 114, 88);width: 40%;" class="form-control-sm">
+    <h1>CADASTRO DE USUARIOS</h1>
+    Nome <input name="nome" class="form-control-sm" type="text">
+    Idade <input name="idade" class="form-control-sm" type="text"><br><br>
+    Cidade <input name="cidade" class="form-control-sm" type="text">
+    e-mail <input name="email" class="form-control-sm" type="text"><br><br>
+    <button class="form-control-sm">Cadastrar!</button>
+  </div>     <!-- Optional JavaScript; choose one of the two! -->
+</form>
+
+    {% endblock %}

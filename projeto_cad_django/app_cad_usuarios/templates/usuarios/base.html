@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>CADASTRE-ME!</title>
+  </head>
+  <style>
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  form {
+    padding: 7%;
+    width: 40%;
+    text-align: center;
+    background-color: rgb(134, 114, 88);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  @media (max-width: 768px) {
+    form {
+      width: 80%; /* Reduza a largura do formulário para telas menores */
+    }
+  }
+  table {
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  table {
+    width: 100%; /* Aumenta a largura da tabela para telas menores */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav{
+    order: 2;
+    /* Outros estilos do navbar para telas menores */
+  }
+
+  table{
+    order: 1;
+    /* Outros estilos da tabela para telas menores */
+  }
+}
+  </style>
+  <body style="background-color: burlywood; text-align: center;">
+    <!-- As a heading -->
+<nav style="background-color: aquamarine !important;" class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1"><a style="text-decoration: none;color: black;" href="{% url 'home' %}">CADASTRE-ME!</a></span>
+  </div>
+</nav>
+<!--criando o formato base da pagina para nao precisar usar nas outras.-->
+{% block conteudo %}
+
+
+
+{% endblock %}
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
